@@ -1,8 +1,15 @@
+def slugify():
+    pass
+
+
 class Card(object):
-    def __init__(self, name, cost, text):
+    def __init__(self, name, cost, rarity, text):
         self.name = name
         self.cost = cost
+        self.rarity = rarity
         self.text = text
+
+        self.slug = slugify(name)
 
 
 class Minion(Card):
